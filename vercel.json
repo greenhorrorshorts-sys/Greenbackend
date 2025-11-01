@@ -1,10 +1,19 @@
 {
   "version": 2,
   "builds": [
-    { "src": "server.py", "use": "@vercel/python" }
+    {
+      "src": "server.py",
+      "use": "@vercel/python"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "server.py" }
-  ]
+    {
+      "src": "/(.*)",
+      "dest": "server.py"
+    }
+  ],
+  "env": {
+    "MONGO_URI": "mongodb+srv://greenshorts_db_user:dnpPHkntI0P7KHDy@greenshorts.jzq6ip.mongodb.net/Greenshorts?retryWrites=true&w=majority"
+  }
 }
 
